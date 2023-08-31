@@ -3,17 +3,44 @@ body {
     color: #fff;
     font-family: 'Press Start 2P', sans-serif;
     text-align: center;
+    scroll-snap-type: y mandatory;
+    transition: all .5s ease-in-out;
 }
 
+
+.nama{ text-shadow: -6px -6px #1790f3,6px 6px #ff1db4;
+  font-size: 4rem;
+	margin-left: 30px;
+	margin-top: 5px;}
+  .arrow {
+    display: flex;
+    
+    justify-content: space-around;
+    
+  }
+  .left-arrow,.right-arrow{
+    color: orange;
+    width: 3em;
+    height: 3em;
+    
+    
+  }
+  .left-arrow:hover{
+    border-radius: 50%;
+    transition: all  .5s ease-in-out;
+  }
+  .right-arrow:hover{
+    transition: all  .5s ease-in-out;
+    border-radius: 50%;
+    
+  }
 .floating {
 	animation-name: floating;
 	animation-duration: 3s;
 	animation-iteration-count: infinite;
 	animation-timing-function: ease-in-out;
-	margin-left: 30px;
-	margin-top: 5px;
-    text-shadow: -6px -6px #1790f3,6px 6px #ff1db4;
-    font-size: 4rem;
+	
+   
 }
 
 @keyframes floating {
@@ -45,13 +72,31 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
 }
+
+
+
+.card:hover {
+  /* ... your existing hover styles ... */
+  transition: transform 0.3s;
+}
+
+
+
+
 .cards{
     margin: auto;
     display: flex;
     justify-content: center;
     flex-direction: row;
-    
+    justify-content: start;
+    overflow-y: hidden;
+    width: 70vw;
+    border-radius: 1rem;
+    overflow-x: scroll;
     align-items:space-between;
+    background: linear-gradient(45deg, #1790f3 50%, #ff1db4 50%);
+    background-size: 200% 100%;
+    transition: background 0.3s;
 } 
 
 .card{
@@ -289,6 +334,6 @@ justify-content: center;
 
 @keyframes fade {
   100% {
-    opacity: 100%;
+    opacity: 20%;
   }
 }
